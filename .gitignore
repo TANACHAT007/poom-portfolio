@@ -1,0 +1,13 @@
+node_modules/
+*.log
+.firebase/
+.DS_Store
+Thumbs.db
+# NOTE: css/tailwind.css is deliberately NOT ignored — it is the precompiled stylesheet that
+# Firebase Hosting serves (there is no build step on deploy). Commit it after `npm run build:css`.
+dist/
+database.rules.shared.json
+
+# portfolio: raw Drive downloads and scratch are not published
+assets/drive/
+work/

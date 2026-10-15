@@ -1,0 +1,19 @@
+{
+  "name": "poom-portfolio",
+  "private": true,
+  "version": "0.1.0",
+  "description": "พอร์ตโฟลิโอผลงานแรก: โครงงาน SolarAqua สถานีอากาศ + แกลเลอรี่วิดีโอ/รูปเก็บข้อมูล 3 วัน — static multi-page site; Tailwind is precompiled (run `npm run build:css` after changing classes).",
+  "scripts": {
+    "build:css": "tailwindcss -i ./css/tailwind-input.css -o ./css/tailwind.css --minify",
+    "watch:css": "tailwindcss -i ./css/tailwind-input.css -o ./css/tailwind.css --watch",
+    "test": "node tests/outbox.test.js && node tests/errors.test.js",
+    "test:rules": "npm run rules:build --silent && firebase emulators:exec --project guyyapap-lab --only auth,database \"node tests/rules.emu.test.mjs\"",
+    "emu": "npm run rules:build --silent && firebase emulators:start --project guyyapap-lab --only auth,database",
+    "serve": "npx --yes http-server -p 5500 -c-1 .",
+    "make-admin": "node scripts/make-admin.mjs",
+    "rules:build": "node scripts/merge-rules.mjs --app . --out database.rules.shared.json"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.19"
+  }
+}

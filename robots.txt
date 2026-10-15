@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Signed-in pages hold personal data and have no value in search results
+Disallow: /dashboard.html
+Disallow: /profile.html
+Disallow: /manage.html

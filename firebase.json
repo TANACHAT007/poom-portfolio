@@ -1,0 +1,53 @@
+{
+  "database": {
+    "rules": "database.rules.shared.json",
+    "predeploy": [
+      "node scripts/merge-rules.mjs --guard"
+    ]
+  },
+  "emulators": {
+    "auth": {
+      "port": 9099
+    },
+    "database": {
+      "port": 9000
+    },
+    "ui": {
+      "enabled": false
+    },
+    "singleProjectMode": true
+  },
+  "hosting": {
+    "site": "poom-portfolio",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "database.rules.json",
+      "README.md",
+      "CHANGELOG.md",
+      "CLAUDE.md",
+      "package.json",
+      "package-lock.json",
+      "tailwind.config.js",
+      "css/tailwind-input.css",
+      "**/.*",
+      "**/node_modules/**",
+      "tests/**",
+      "scripts/**",
+      "*.log",
+      "dist/**",
+      "database.rules.shared.json"
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(html|js)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      }
+    ]
+  }
+}

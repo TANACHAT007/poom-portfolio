@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>รูปและคลิป · Portfolio ภูมิ</title>
+  <meta name="theme-color" content="#0ea5e9" />
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="css/tailwind.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- THEME:FONTS:START ocean -->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- THEME:FONTS:END -->
+  <script>try { if (localStorage.getItem("poom-portfolio-theme") === "dark") document.documentElement.classList.add("dark"); } catch (e) {}</script>
+  <style>
+    .pop { transition: transform .3s cubic-bezier(.34,1.56,.64,1); }
+    .pop:hover { transform: translateY(-4px) rotate(-1deg) scale(1.03); }
+    @media (prefers-reduced-motion: reduce) { .pop:hover { transform: none; } }
+  </style>
+</head>
+<body class="bg-white text-slate-800">
+  <div id="nav-root"></div>
+
+  <main class="max-w-5xl mx-auto px-4 py-14">
+    <section id="photos" class="scroll-mt-20">
+      <h1 class="text-4xl font-extrabold tracking-tight">📷 รูปกิจกรรม</h1>
+      <p class="mt-2 text-slate-500">แยกตามวัน · Day 2 ติดตั้งตู้ v3 · Day 3 ซ่อมบำรุงและเก็บผล</p>
+      <div id="p-tabs" class="flex flex-wrap gap-2 mt-6 mb-6"></div>
+      <div id="p-grid" class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3"></div>
+    </section>
+
+    <section id="clips" class="scroll-mt-20 mt-24">
+      <h2 class="text-4xl font-extrabold tracking-tight">🎬 วิดีโอ</h2>
+      <p class="mt-2 text-slate-500">คลิปรวม มีคำบรรยายภาษาอังกฤษ</p>
+      <div id="featured" class="mt-6 grid gap-8"></div>
+    </section>
+  </main>
+
+  <div id="lb" class="fixed inset-0 z-50 hidden bg-black/90 grid place-items-center p-4">
+    <button id="lb-close" class="absolute top-4 right-4 w-11 h-11 rounded-full bg-white/15 text-white text-2xl hover:bg-white/30" aria-label="ปิด">✕</button>
+    <div id="lb-body" class="max-w-5xl w-full max-h-[85vh] grid place-items-center"></div>
+  </div>
+
+  <footer class="py-10 text-center text-slate-400 text-sm"><span data-no-translate>Portfolio ภูมิ</span> · <span id="year"></span></footer>
+
+  <script type="module">
+    import { renderNav, escapeHtml } from "./js/app.js";
+    renderNav(location.hash === "#clips" ? "clips" : "photos");
+    window.addEventListener("hashchange", () => renderNav(location.hash === "#clips" ? "clips" : "photos"));
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const DAYS = { day1: "วันที่ 1", day2: "วันที่ 2", day3: "วันที่ 3" };
+    const lb = document.getElementById("lb"), lbBody = document.getElementById("lb-body");
+    const openLb = (it) => {
+      lbBody.innerHTML = it.type === "video"
+        ? `<video src="${escapeHtml(it.file)}" controls autoplay playsinline class="max-h-[85vh] max-w-full rounded-3xl"></video>`
+        : `<img src="${escapeHtml(it.file)}" alt="" class="max-h-[85vh] max-w-full rounded-3xl object-contain" />`;
+      lb.classList.remove("hidden");
+    };
+    const closeLb = () => { lb.classList.add("hidden"); lbBody.innerHTML = ""; };
+    document.getElementById("lb-close").addEventListener("click", closeLb);
+    lb.addEventListener("click", (e) => { if (e.target === lb) closeLb(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLb(); });
+
+    function section(items, tabsEl, gridEl) {
+      let cur = "all";
+      const draw = () => {
+        const list = items.filter((i) => cur === "all" || i.day === cur);
+        gridEl.innerHTML = list.map((it, k) => `
+          <button data-k="${k}" class="pop relative aspect-square rounded-3xl overflow-hidden bg-slate-100">
+            <img loading="lazy" src="${escapeHtml(it.type === "video" ? it.poster : it.file)}" alt="" class="w-full h-full object-cover" />
+            ${it.type === "video" ? '<span class="absolute inset-0 grid place-items-center"><span class="w-12 h-12 rounded-full bg-white/90 text-brand-600 grid place-items-center text-lg shadow">▶</span></span>' : ""}
+          </button>`).join("");
+        gridEl.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => openLb(list[Number(b.dataset.k)])));
+        const keys = ["all", ...Object.keys(DAYS).filter((k) => items.some((i) => i.day === k))];
+        tabsEl.innerHTML = keys.map((k) => `<button data-k="${k}" class="px-4 py-2 rounded-full text-sm font-semibold transition ${k === cur ? "bg-brand-600 text-white" : "bg-slate-100 text-slate-600 hover:bg-slate-200"}">${k === "all" ? "ทั้งหมด" : DAYS[k]} <span class="opacity-70">${k === "all" ? items.length : items.filter((i) => i.day === k).length}</span></button>`).join("");
+        tabsEl.querySelectorAll("button").forEach((b) => b.addEventListener("click", () => { cur = b.dataset.k; draw(); }));
+      };
+      draw();
+    }
+
+    try {
+      const items = await (await fetch("assets/media/manifest.json")).json();
+      const clips = await (await fetch("assets/clip/clips.json")).json();
+      section(items.filter((i) => i.type === "photo"), document.getElementById("p-tabs"), document.getElementById("p-grid"));
+      document.getElementById("featured").innerHTML = clips.map((c) => `
+        <figure class="max-w-3xl"><video src="${escapeHtml(c.file)}" poster="${escapeHtml(c.poster)}" controls playsinline preload="none" class="w-full rounded-3xl bg-black">${c.vtt ? `<track kind="subtitles" srclang="en" label="English" src="${escapeHtml(c.vtt)}" default />` : ""}</video>
+        <figcaption class="mt-2 text-sm text-slate-500"><b>${escapeHtml(c.title)}</b>${c.note ? " · " + escapeHtml(c.note) : ""}</figcaption></figure>`).join("");
+      if (location.hash) document.querySelector(location.hash)?.scrollIntoView();
+    } catch (e) { console.error(e); }
+  </script>
+</body>
+</html>
