@@ -1,4 +1,5 @@
 [
- {"day":"day1","file":"assets/clip/day1-film.mp4","poster":"assets/clip/day1-film.jpg","vtt":"assets/clip/day1-film.en.vtt","title":"Day 1 · How SolarAqua works","note":"ปัญหา วิธีแก้ ตัววัด 4 เซนเซอร์ และสถานีหลัก (English subtitles)"},
+ {"day":"day1","file":"assets/clip/day1-en.mp4","poster":"assets/clip/day1-en.jpg","title":"Day 1 · English version","note":"title cards, captions and effects · burned-in English subtitles"},
+ {"day":"day1","file":"assets/clip/day1-th.mp4","poster":"assets/clip/day1-th.jpg","title":"Day 1 · เวอร์ชันภาษาไทย","note":"เสียงไทย ซับอังกฤษฝังในคลิป"},
  {"day":"day2","file":"assets/clip/day2-web.mp4","poster":"assets/clip/day2-poster.jpg","title":"Day 2 · สัมภาษณ์หน้างาน","note":"ภูมิและพี่หน่อง ที่แปลงนาสระบุรี (English subtitles)"}
 ]
