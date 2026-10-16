@@ -39,8 +39,8 @@ Dates are Asia/Bangkok. Record: plan, decisions/assumptions, changes, and test r
 - Added capstone.html (volunteer project: school survey, LED lights, 100% solar CCTV) + assets/capstone/; nav now SolarAqua / SmartLung / Capstone. Omitted photos with children. Tested: no console errors, no h-scroll at 390px, light/dark.
 - Added solaraqua-v1.html (TJWP 2026 top-30, build + booth photos) + assets/v1/; nav: SolarAqua V.3 / V.1 / SmartLung / Capstone. Tested: no console errors, no h-scroll at 390px, light/dark.
 - Flexible masonry photo layout (no cropping) on all pages; added problem illustrations (assets/illus/*.svg) + "problem → why we built it" section on SmartLung, Capstone, V.1.
-- Day 1 film: Poom's Thai narration replaced with English neural voice-over (edge-tts en-US-GuyNeural) timed to the English captions; original audio kept at 5%.
 - Research-style structure on V.1/SmartLung/Capstone: Abstract (TH+EN) + objectives, problem, method (solution illustration + system steps), then results/photos.
 - Wow pass: hero stat chips (count-up) + floating tilted photo trio, auto-scrolling photo marquee, scroll progress bar, timeline arrows (css/wow.css, js/wow.js) on all 4 project pages. Tested: no console errors, no h-scroll at 390px, light/dark.
 - Curated photo layouts: bento grids (b11/b12/b22) with hand-picked photos per day/section instead of auto-picked masonry; hero trio + marquee keep natural aspect ratios; capstone/V.1/SmartLung sections re-laid out.
 - Cinematic full-viewport hero (Ken Burns photo slideshow, glass stat chips, scroll cue) + parallax photo bands with giant numbers on all 4 pages; tile hover-zoom and staggered reveal. Tested: no console errors, no h-scroll at 390px, light/dark.
+- Day 1 film now uses the real English takes of Poom (IMG_3045 main node, IMG_3055 gateway) instead of AI voice-over; captions re-timed from Whisper (en). Film is 1:56.
