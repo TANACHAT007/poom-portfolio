@@ -40,3 +40,4 @@ Dates are Asia/Bangkok. Record: plan, decisions/assumptions, changes, and test r
 - Added solaraqua-v1.html (TJWP 2026 top-30, build + booth photos) + assets/v1/; nav: SolarAqua V.3 / V.1 / SmartLung / Capstone. Tested: no console errors, no h-scroll at 390px, light/dark.
 - Flexible masonry photo layout (no cropping) on all pages; added problem illustrations (assets/illus/*.svg) + "problem → why we built it" section on SmartLung, Capstone, V.1.
 - Day 1 film: Poom's Thai narration replaced with English neural voice-over (edge-tts en-US-GuyNeural) timed to the English captions; original audio kept at 5%.
+- Research-style structure on V.1/SmartLung/Capstone: Abstract (TH+EN) + objectives, problem, method (solution illustration + system steps), then results/photos.
