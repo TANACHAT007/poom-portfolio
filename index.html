@@ -165,7 +165,7 @@
         const n = Math.min(6, ps.length);
         const pick = Array.from({ length: n }, (_, j) => ps[Math.floor(j * ps.length / n)]);
         return `<div class="reveal"><h3 class="text-2xl font-extrabold">${s.title}</h3><p class="mt-2 text-slate-600 max-w-2xl leading-relaxed">${s.text}</p>
-          <div class="mt-5 grid grid-cols-2 sm:grid-cols-3 gap-3">${pick.map((it) => `<button data-f="${escapeHtml(it.file)}" class="pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-200"><img loading="lazy" src="${escapeHtml(it.file)}" alt="" class="w-full h-full object-cover" /></button>`).join("")}</div></div>`;
+          <div class="mt-5 columns-2 sm:columns-3 gap-3">${pick.map((it) => `<button data-f="${escapeHtml(it.file)}" class="pop block w-full mb-3 break-inside-avoid rounded-3xl overflow-hidden bg-slate-200"><img loading="lazy" src="${escapeHtml(it.file)}" alt="" class="w-full h-auto block" /></button>`).join("")}</div></div>`;
       }).join("");
       wrap.querySelectorAll("button[data-f]").forEach((b) => b.addEventListener("click", () => openLb(b.dataset.f)));
       document.getElementById("films-box").innerHTML = clips.map((c) => `<figure class="reveal max-w-3xl mx-auto w-full"><video src="${escapeHtml(c.file)}" poster="${escapeHtml(c.poster)}" controls playsinline preload="none" class="w-full rounded-3xl bg-black">${c.vtt ? `<track kind="subtitles" srclang="en" label="English" src="${escapeHtml(c.vtt)}" default />` : ""}</video><figcaption class="mt-3 text-center"><b>${escapeHtml(c.title)}</b>${c.note ? `<div class="text-sm text-slate-500">${escapeHtml(c.note)}</div>` : ""}</figcaption></figure>`).join("");
