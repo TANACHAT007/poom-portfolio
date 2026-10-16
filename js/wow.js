@@ -11,13 +11,48 @@ export function initWow() {
   };
   addEventListener("scroll", onScroll, { passive: true });
 
+  const head = document.querySelector("header[data-bg]");
+  if (head) {
+    head.classList.add("wow-cine");
+    const bg = document.createElement("div");
+    bg.className = "cine-bg";
+    bg.innerHTML = head.dataset.bg.split(",").map((p) => `<div class="cine-slide" style="background-image:url('${esc(p)}')"></div>`).join("") + '<div class="cine-shade"></div>';
+    head.prepend(bg);
+    const cue = document.createElement("div");
+    cue.className = "cine-cue";
+    head.appendChild(cue);
+    const slides = [...bg.querySelectorAll(".cine-slide")];
+    let k = 0;
+    slides[0].classList.add("on");
+    if (slides.length > 1) setInterval(() => {
+      slides[k].classList.remove("on");
+      k = (k + 1) % slides.length;
+      slides[k].classList.add("on");
+    }, 5500);
+  }
+
+  document.querySelectorAll(".wow-band").forEach((b) => {
+    b.innerHTML = `<div class="band-bg" style="background-image:url('${esc(b.dataset.bg)}')"></div><div class="band-in reveal"><b>${esc(b.dataset.big)}</b><span>${esc(b.dataset.text)}</span></div>`;
+  });
+  const bands = [...document.querySelectorAll(".wow-band .band-bg")];
+  if (bands.length && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    const par = () => bands.forEach((el) => {
+      const r = el.parentElement.getBoundingClientRect();
+      if (r.bottom < 0 || r.top > innerHeight) return;
+      el.style.transform = `translate3d(0,${((r.top + r.height / 2 - innerHeight / 2) * -0.18).toFixed(1)}px,0)`;
+    });
+    addEventListener("scroll", par, { passive: true });
+    par();
+  }
+  document.querySelectorAll(".band-in").forEach((el) => { new IntersectionObserver((es, o) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("show"); o.disconnect(); } }), { threshold: 0.2 }).observe(el); });
+
   const hero = document.getElementById("wow-hero");
   if (hero) {
-    const photos = hero.dataset.photos.split(",");
+    const photos = (hero.dataset.photos || "").split(",").filter(Boolean);
     const stats = (hero.dataset.stats || "").split(";").filter(Boolean).map((x) => x.split("|"));
     hero.innerHTML =
       `<div class="wow-stats">${stats.map(([n, l]) => `<div class="wow-stat"><b data-count="${esc(n)}">${esc(n)}</b><span>${esc(l)}</span></div>`).join("")}</div>` +
-      `<div class="wow-photos">${photos.map((p) => `<div class="wow-photo"><img src="${esc(p)}" alt="" loading="eager" /></div>`).join("")}</div>`;
+      (photos.length ? `<div class="wow-photos">${photos.map((p) => `<div class="wow-photo"><img src="${esc(p)}" alt="" loading="eager" /></div>`).join("")}</div>` : "");
     const io = new IntersectionObserver((es) => es.forEach((e) => {
       if (!e.isIntersecting) return;
       io.unobserve(e.target);

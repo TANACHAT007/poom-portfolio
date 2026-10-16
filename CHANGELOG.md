@@ -43,3 +43,4 @@ Dates are Asia/Bangkok. Record: plan, decisions/assumptions, changes, and test r
 - Research-style structure on V.1/SmartLung/Capstone: Abstract (TH+EN) + objectives, problem, method (solution illustration + system steps), then results/photos.
 - Wow pass: hero stat chips (count-up) + floating tilted photo trio, auto-scrolling photo marquee, scroll progress bar, timeline arrows (css/wow.css, js/wow.js) on all 4 project pages. Tested: no console errors, no h-scroll at 390px, light/dark.
 - Curated photo layouts: bento grids (b11/b12/b22) with hand-picked photos per day/section instead of auto-picked masonry; hero trio + marquee keep natural aspect ratios; capstone/V.1/SmartLung sections re-laid out.
+- Cinematic full-viewport hero (Ken Burns photo slideshow, glass stat chips, scroll cue) + parallax photo bands with giant numbers on all 4 pages; tile hover-zoom and staggered reveal. Tested: no console errors, no h-scroll at 390px, light/dark.
