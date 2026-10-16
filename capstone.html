@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capstone · Portfolio ภูมิ</title>
+  <meta name="description" content="Capstone: โครงการจิตอาสา สำรวจและคุยปัญหากับโรงเรียน เปลี่ยนเป็นหลอด LED ประหยัดพลังงาน และติดตั้งกล้องวงจรปิดที่ใช้พลังงานแสงอาทิตย์ 100%" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Capstone · Portfolio ภูมิ" />
+  <meta property="og:description" content="โครงการจิตอาสา: LED ประหยัดไฟ และกล้องวงจรปิดโซลาร์เซลล์ให้โรงเรียน" />
+  <meta property="og:locale" content="th_TH" />
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="css/tailwind.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- THEME:FONTS:START ocean -->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- THEME:FONTS:END -->
+  <script>try { if (localStorage.getItem("poom-portfolio-theme") === "dark") document.documentElement.classList.add("dark"); } catch (e) {}</script>
+  <style>
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s cubic-bezier(.16,1,.3,1); }
+    .reveal.show { opacity: 1; transform: none; }
+    .pop { transition: transform .3s cubic-bezier(.34,1.56,.64,1); }
+    .pop:hover { transform: translateY(-4px) rotate(-1deg) scale(1.03); }
+    .bob { animation: bob 3.2s ease-in-out infinite; }
+    @keyframes bob { 0%,100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-10px) rotate(4deg); } }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } .pop:hover { transform: none; } .bob { animation: none; } }
+  </style>
+</head>
+<body class="bg-white text-slate-800">
+  <div id="nav-root"></div>
+
+  <header class="relative overflow-hidden">
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[640px] h-[640px] rounded-full bg-brand-100/60 blur-3xl" aria-hidden="true"></div>
+    <span class="bob absolute top-16 left-[8%] text-4xl select-none" aria-hidden="true">💡</span>
+    <span class="bob absolute top-8 right-[8%] sm:top-40 sm:right-[12%] text-4xl select-none" style="animation-delay:-1s" aria-hidden="true">☀️</span>
+    <div class="max-w-3xl mx-auto px-4 pt-20 pb-20 md:pt-28 md:pb-28 relative text-center animate-fadeUp">
+      <p class="inline-block px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-sm font-medium" data-no-translate>Capstone · โครงการจิตอาสา</p>
+      <h1 class="mt-6 text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">ให้โรงเรียน<span class="hero-grad">ประหยัดไฟ</span><br />และปลอดภัยขึ้น</h1>
+      <p class="mt-5 text-lg md:text-xl text-slate-600">ติดตั้งหลอด LED ลดการใช้พลังงาน และกล้องวงจรปิดที่ใช้พลังงานแสงอาทิตย์ 100%</p>
+      <div class="mt-9 flex flex-wrap gap-3 justify-center">
+        <a href="#survey" class="pop px-7 py-3 rounded-full bg-brand-600 text-white font-semibold hover:bg-brand-700">ดูเรื่องราว</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="survey" class="max-w-5xl mx-auto px-4 py-16 scroll-mt-16">
+    <p class="reveal text-sm font-semibold text-brand-600">1 · สำรวจพื้นที่</p>
+    <h2 class="reveal mt-2 text-3xl font-extrabold">ลงพื้นที่ คุยปัญหากับทางโรงเรียน</h2>
+    <p class="reveal mt-3 text-slate-600 max-w-2xl leading-relaxed">เริ่มจากไปดูสถานที่จริง พูดคุยกับครูเพื่อรู้ว่าโรงเรียนต้องการอะไร และวัดพื้นที่ที่จะติดตั้ง</p>
+    <div class="mt-8 grid grid-cols-2 gap-3">
+      <button data-f="assets/capstone/survey1.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/capstone/survey1.jpg" alt="คุยกับครูที่โรงเรียน" loading="lazy" class="w-full h-full object-cover " /></button>
+      <button data-f="assets/capstone/survey2.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/capstone/survey2.jpg" alt="คุยกับครูที่โรงเรียน" loading="lazy" class="w-full h-full object-cover " /></button>
+      <button data-f="assets/capstone/survey3.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/capstone/survey3.jpg" alt="ชี้จุดที่จะติดตั้ง" loading="lazy" class="w-full h-full object-cover " /></button>
+      <button data-f="assets/capstone/survey4.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/capstone/survey4.jpg" alt="วัดพื้นที่ติดตั้ง" loading="lazy" class="w-full h-full object-cover " /></button>
+    </div>
+  </section>
+
+  <section id="problem" class="max-w-5xl mx-auto px-4 py-16 scroll-mt-16">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div class="reveal">
+        <p class="text-sm font-semibold text-brand-600">2 · สิ่งที่ลงมือทำ</p>
+        <h2 class="mt-2 text-3xl font-extrabold">2 งาน เพื่อโรงเรียน</h2>
+        <ul class="mt-4 space-y-3 text-slate-600 leading-relaxed">
+          <li>💡 <b>เปลี่ยนเป็นหลอด LED</b> — ลดการใช้พลังงานไฟฟ้าของโรงเรียน</li>
+          <li>☀️ <b>ติดตั้งกล้องวงจรปิดพลังงานแสงอาทิตย์ 100%</b> — ไม่ต้องพึ่งไฟจากโรงเรียน</li>
+        </ul>
+      </div>
+      <button data-f="assets/capstone/old-lights.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/capstone/old-lights.jpg" alt="หลอดไฟเดิมในห้องเรียน" loading="lazy" class="w-full h-full object-cover" /></button>
+    </div>
+  </section>
+
+  <section id="install" class="max-w-5xl mx-auto px-4 py-16 scroll-mt-16">
+    <p class="reveal text-sm font-semibold text-brand-600">3 · วันติดตั้ง</p>
+    <h2 class="reveal mt-2 text-3xl font-extrabold">ลงมือติดตั้งจริงกับทีม</h2>
+    <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-3">
+      <button data-f="assets/capstone/install1.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/capstone/install1.jpg" alt="ขนอุปกรณ์" loading="lazy" class="w-full h-full object-cover " /></button>
+      <button data-f="assets/capstone/install2.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/capstone/install2.jpg" alt="ยกเสากล้อง" loading="lazy" class="w-full h-full object-cover " /></button>
+      <button data-f="assets/capstone/install3.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/capstone/install3.jpg" alt="ประกอบอุปกรณ์" loading="lazy" class="w-full h-full object-cover " /></button>
+      <button data-f="assets/capstone/install4.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/capstone/install4.jpg" alt="เดินสายและประกอบ" loading="lazy" class="w-full h-full object-cover " /></button>
+      <button data-f="assets/capstone/install5.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/capstone/install5.jpg" alt="ติดตั้งบนเสา" loading="lazy" class="w-full h-full object-cover " /></button>
+      <button data-f="assets/capstone/install6.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/capstone/install6.jpg" alt="ติดตั้งแผงโซลาร์เซลล์และกล้อง" loading="lazy" class="w-full h-full object-cover " /></button>
+      <button data-f="assets/capstone/install7.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/capstone/install7.jpg" alt="ติดตั้งกล้อง" loading="lazy" class="w-full h-full object-cover " /></button>
+      <button data-f="assets/capstone/install8.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/capstone/install8.jpg" alt="ติดตั้งบนฝ้าเพดาน" loading="lazy" class="w-full h-full object-cover " /></button>
+    </div>
+    <figure class="reveal mt-10 max-w-xl mx-auto">
+      <button data-f="assets/capstone/team.jpg" class="pop w-full rounded-3xl overflow-hidden bg-slate-100"><img src="assets/capstone/team.jpg" alt="ทีมถ่ายรูปหน้าโรงเรียน" loading="lazy" class="w-full object-cover" /></button>
+      <figcaption class="mt-2 text-center text-sm text-slate-500">ทีมหน้าโรงเรียนหลังติดตั้งเสร็จ</figcaption>
+    </figure>
+  </section>
+
+  <div id="lb" class="fixed inset-0 z-50 hidden bg-black/90 grid place-items-center p-4">
+    <button id="lb-close" class="absolute top-4 right-4 w-11 h-11 rounded-full bg-white/15 text-white text-2xl hover:bg-white/30" aria-label="ปิด">✕</button>
+    <div id="lb-body" class="max-w-5xl w-full max-h-[85vh] grid place-items-center"></div>
+  </div>
+
+  <footer class="py-10 text-center text-slate-400 text-sm"><span data-no-translate>Portfolio ภูมิ</span> · <span id="year"></span></footer>
+
+  <script type="module">
+    import { renderNav, escapeHtml } from "./js/app.js";
+    renderNav("capstone");
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("show"); io.unobserve(e.target); } }), { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    const lb = document.getElementById("lb"), lbBody = document.getElementById("lb-body");
+    const openLb = (file) => {
+      lbBody.innerHTML = `<img src="${escapeHtml(file)}" alt="" class="max-h-[85vh] max-w-full rounded-3xl object-contain" />`;
+      lb.classList.remove("hidden");
+    };
+    const closeLb = () => { lb.classList.add("hidden"); lbBody.innerHTML = ""; };
+    document.querySelectorAll("button[data-f]").forEach((b) => b.addEventListener("click", () => openLb(b.dataset.f)));
+    document.getElementById("lb-close").addEventListener("click", closeLb);
+    lb.addEventListener("click", (e) => { if (e.target === lb) closeLb(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLb(); });
+  </script>
+</body>
+</html>

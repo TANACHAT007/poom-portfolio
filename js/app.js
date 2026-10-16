@@ -19,9 +19,10 @@ export const APP = {
 
 // Top navigation. auth: only when signed in · roles: only for these roles · guest: only when signed out.
 export const NAV = [
-  { id: "home", label: "สรุปผลงาน", href: "index.html", guest: true },
-  { id: "photos", label: "รูปกิจกรรม", href: "gallery.html#photos", guest: true },
-  { id: "clips", label: "คลิป", href: "gallery.html#clips", guest: true },
+  { id: "home", label: "SolarAqua V.3", href: "index.html", guest: true },
+  { id: "v1", label: "SolarAqua V.1", href: "solaraqua-v1.html", guest: true },
+  { id: "smartlung", label: "SmartLung", href: "smartlung.html", guest: true },
+  { id: "capstone", label: "Capstone", href: "capstone.html", guest: true },
 ];
 
 // Role labels shown in the nav / manage page. Rules allow exactly these values (database.rules.json).

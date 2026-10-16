@@ -47,8 +47,7 @@
 
   <script type="module">
     import { renderNav, escapeHtml } from "./js/app.js";
-    renderNav(location.hash === "#clips" ? "clips" : "photos");
-    window.addEventListener("hashchange", () => renderNav(location.hash === "#clips" ? "clips" : "photos"));
+    renderNav("home");
     document.getElementById("year").textContent = new Date().getFullYear();
 
     const DAYS = { day1: "วันที่ 1", day2: "วันที่ 2", day3: "วันที่ 3" };

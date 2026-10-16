@@ -31,3 +31,10 @@ Dates are Asia/Bangkok. Record: plan, decisions/assumptions, changes, and test r
 - Day 2 now holds the new v3 install photos (20); Day 3 = repair photos (19); Day 1 = 42. Individual video shots dropped (73 clips removed from site).
 - Films: Day 1 explainer built from takes 3066/3071/3040/3050 (113 s, original Thai audio + English WebVTT track, subtitles translated from Whisper transcripts - verify wording); Day 2 = owner's finished 3:36 clip with burned-in English subs.
 - Verified (headless Edge, desktop): both videos load, 24 VTT cues parse, no console errors. Not re-tested: mobile/dark after rewrite, deploy.
+
+## 2026-10-16
+- Day 1 films re-rendered with a lighter vignette and a bit more saturation; Thai-voice film removed from clips.json (site targets foreign viewers).
+- New tab per project: nav is now SolarAqua / SmartLung. Added `smartlung.html` (3 awards, 3D CAD, WICO Seoul photos; iCAN was online) + `assets/smartlung/`.
+- Tested: no console errors, no horizontal scroll at 390px, light/dark, all 11 images load.
+- Added capstone.html (volunteer project: school survey, LED lights, 100% solar CCTV) + assets/capstone/; nav now SolarAqua / SmartLung / Capstone. Omitted photos with children. Tested: no console errors, no h-scroll at 390px, light/dark.
+- Added solaraqua-v1.html (TJWP 2026 top-30, build + booth photos) + assets/v1/; nav: SolarAqua V.3 / V.1 / SmartLung / Capstone. Tested: no console errors, no h-scroll at 390px, light/dark.

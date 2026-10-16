@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartLung · Portfolio ภูมิ</title>
+  <meta name="description" content="SmartLung: เครื่องฝึกกล้ามเนื้อหายใจอัจฉริยะพร้อมระบบติดตามระยะไกลสำหรับผู้สูงอายุ — Gold Award จาก WICO 2026 (โซล), Silver Medal จาก iCAN 2026 และ OFEED Special Award" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SmartLung · Portfolio ภูมิ" />
+  <meta property="og:description" content="เครื่องฝึกกล้ามเนื้อหายใจอัจฉริยะสำหรับผู้สูงอายุ — ส่งแข่ง 2 เวทีนานาชาติ ได้ 3 รางวัล" />
+  <meta property="og:locale" content="th_TH" />
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="css/tailwind.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- THEME:FONTS:START ocean -->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- THEME:FONTS:END -->
+  <script>try { if (localStorage.getItem("poom-portfolio-theme") === "dark") document.documentElement.classList.add("dark"); } catch (e) {}</script>
+  <style>
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s cubic-bezier(.16,1,.3,1); }
+    .reveal.show { opacity: 1; transform: none; }
+    .pop { transition: transform .3s cubic-bezier(.34,1.56,.64,1); }
+    .pop:hover { transform: translateY(-4px) rotate(-1deg) scale(1.03); }
+    .bob { animation: bob 3.2s ease-in-out infinite; }
+    @keyframes bob { 0%,100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-10px) rotate(4deg); } }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } .pop:hover { transform: none; } .bob { animation: none; } }
+  </style>
+</head>
+<body class="bg-white text-slate-800">
+  <div id="nav-root"></div>
+
+  <header class="relative overflow-hidden">
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[640px] h-[640px] rounded-full bg-brand-100/60 blur-3xl" aria-hidden="true"></div>
+    <span class="bob absolute top-16 left-[8%] text-4xl select-none" aria-hidden="true">🫁</span>
+    <span class="bob absolute top-8 right-[8%] sm:top-40 sm:right-[12%] text-4xl select-none" style="animation-delay:-1s" aria-hidden="true">🏅</span>
+    <div class="max-w-3xl mx-auto px-4 pt-20 pb-20 md:pt-28 md:pb-28 relative text-center animate-fadeUp">
+      <p class="inline-block px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-sm font-medium" data-no-translate>SmartLung</p>
+      <h1 class="mt-6 text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">ฝึกปอดให้<span class="hero-grad">ผู้สูงอายุ</span><br />แบบอัจฉริยะ</h1>
+      <p class="mt-5 text-lg md:text-xl text-slate-600">เครื่องฝึกกล้ามเนื้อหายใจพร้อมระบบติดตามผลระยะไกล ส่งแข่ง 2 เวทีนานาชาติ ได้รับ 3 รางวัล</p>
+      <div class="mt-9 flex flex-wrap gap-3 justify-center">
+        <a href="#awards" class="pop px-7 py-3 rounded-full bg-brand-600 text-white font-semibold hover:bg-brand-700">ดูรางวัล</a>
+        <a href="#device" class="pop px-7 py-3 rounded-full bg-slate-100 text-slate-700 font-semibold hover:bg-slate-200">ดูตัวเครื่อง</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="awards" class="max-w-5xl mx-auto px-4 py-16 scroll-mt-16">
+    <p class="reveal text-sm font-semibold text-brand-600">รางวัล</p>
+    <h2 class="reveal mt-2 text-3xl font-extrabold">2 เวที 3 รางวัล</h2>
+    <div class="mt-8 grid md:grid-cols-3 gap-5">
+      <article class="reveal rounded-3xl bg-slate-50 dark:bg-slate-800 p-5 text-center">
+        <button data-f="assets/smartlung/wico-medal.jpg" class="pop block mx-auto w-40 h-40 rounded-full overflow-hidden"><img src="assets/smartlung/wico-medal.jpg" alt="เหรียญ WICO 2026" loading="lazy" class="w-full h-full object-cover" /></button>
+        <h3 class="mt-4 text-xl font-extrabold">Gold Award</h3>
+        <p class="text-sm text-slate-500">WICO 2026 · โซล เกาหลีใต้ · 16–18 ก.ค. 2026</p>
+        <p class="mt-2 text-sm text-slate-600">จัดโดย KUIPA · ยกย่องด้านการนำเสนอยอดเยี่ยม ความคิดสร้างสรรค์ และนวัตกรรม</p>
+        <button data-f="assets/smartlung/wico-cert.jpg" class="pop mt-3 text-sm font-semibold text-brand-600">ดูเกียรติบัตร →</button>
+      </article>
+      <article class="reveal rounded-3xl bg-slate-50 dark:bg-slate-800 p-5 text-center">
+        <button data-f="assets/smartlung/ican-medal.jpg" class="pop block mx-auto w-40 h-40 rounded-full overflow-hidden"><img src="assets/smartlung/ican-medal.jpg" alt="เหรียญ iCAN 2026" loading="lazy" class="w-full h-full object-cover" /></button>
+        <h3 class="mt-4 text-xl font-extrabold">Silver Medal</h3>
+        <p class="text-sm text-slate-500">iCAN 2026 · การแข่งขันออนไลน์ · ส.ค. 2026</p>
+        <p class="mt-2 text-sm text-slate-600">การแข่งขันสิ่งประดิษฐ์นานาชาติ ครั้งที่ 11 จัดโดยสมาคมนวัตกรรมแห่งโตรอนโต</p>
+        <button data-f="assets/smartlung/ican-cert.jpg" class="pop mt-3 text-sm font-semibold text-brand-600">ดูเกียรติบัตร →</button>
+      </article>
+      <article class="reveal rounded-3xl bg-slate-50 dark:bg-slate-800 p-5 text-center">
+        <button data-f="assets/smartlung/ofeed-medal.jpg" class="pop block mx-auto w-40 h-40 rounded-full overflow-hidden"><img src="assets/smartlung/ofeed-medal.jpg" alt="เหรียญ OFEED" loading="lazy" class="w-full h-full object-cover" /></button>
+        <h3 class="mt-4 text-xl font-extrabold">OFEED Special Award</h3>
+        <p class="text-sm text-slate-500">ในการแข่งขัน iCAN 2026 · 29 ส.ค. 2026</p>
+        <p class="mt-2 text-sm text-slate-600">รางวัลพิเศษยกย่องสิ่งประดิษฐ์/นวัตกรรมที่ยอดเยี่ยม</p>
+        <button data-f="assets/smartlung/ofeed-cert.jpg" class="pop mt-3 text-sm font-semibold text-brand-600">ดูเกียรติบัตร →</button>
+      </article>
+    </div>
+  </section>
+
+  <section id="device" class="max-w-5xl mx-auto px-4 py-16 scroll-mt-16">
+    <p class="reveal text-sm font-semibold text-brand-600">ตัวผลงาน</p>
+    <h2 class="reveal mt-2 text-3xl font-extrabold">SmartLung: Intelligent Respiratory Muscle Training</h2>
+    <p class="reveal mt-4 text-slate-600 leading-relaxed max-w-2xl">แพลตฟอร์มฝึกกล้ามเนื้อหายใจอัจฉริยะและติดตามผลจากระยะไกล สำหรับผู้สูงอายุ ตัวเครื่องมีหน้าจอสัมผัส ปุ่มปรับระดับแรงต้าน และช่องต่อท่อหายใจ ออกแบบโมเดล 3 มิติก่อนสร้างจริง</p>
+    <div class="mt-8 grid sm:grid-cols-3 gap-3">
+      <button data-f="assets/smartlung/cad1.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/smartlung/cad1.jpg" alt="โมเดล 3 มิติ มองเห็นภายในเครื่อง" loading="lazy" class="w-full h-full object-cover" /></button>
+      <button data-f="assets/smartlung/cad2.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/smartlung/cad2.jpg" alt="โมเดล 3 มิติ มองจากด้านบน" loading="lazy" class="w-full h-full object-cover" /></button>
+      <button data-f="assets/smartlung/cad3.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/smartlung/cad3.jpg" alt="โมเดล 3 มิติ เรนเดอร์" loading="lazy" class="w-full h-full object-cover" /></button>
+    </div>
+  </section>
+
+  <section id="clip" class="max-w-5xl mx-auto px-4 py-16 scroll-mt-16">
+    <p class="reveal text-sm font-semibold text-brand-600">คลิปนำเสนอ</p>
+    <h2 class="reveal mt-2 text-3xl font-extrabold">คลิปส่งแข่ง iCAN 2026</h2>
+    <p class="reveal mt-3 text-slate-600 max-w-2xl">แนะนำปัญหา ตัวเครื่องจริง (ส่วนจอแสดงผลและเซนเซอร์) และเว็บแดชบอร์ดสำหรับติดตามผู้ป่วย — มีคำบรรยายภาษาอังกฤษ</p>
+    <figure class="reveal mt-8 max-w-3xl mx-auto"><video src="assets/smartlung/ican-clip.mp4" poster="assets/smartlung/ican-poster.jpg" controls playsinline preload="none" class="w-full rounded-3xl bg-black"></video>
+    <figcaption class="mt-3 text-center text-sm text-slate-500">iCAN 2026 · SmartLung</figcaption></figure>
+  </section>
+
+  <section id="wico" class="max-w-5xl mx-auto px-4 py-16 scroll-mt-16">
+    <p class="reveal text-sm font-semibold text-brand-600">บรรยากาศหน้างาน</p>
+    <h2 class="reveal mt-2 text-3xl font-extrabold">WICO 2026 · โซล เกาหลีใต้</h2>
+    <p class="reveal mt-3 text-slate-600 max-w-2xl">ไปนำเสนอผลงานด้วยตัวเองที่งาน World Invention Creativity Olympic ครั้งที่ 15</p>
+    <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-3">
+      <button data-f="assets/smartlung/wico3.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/smartlung/wico3.jpg" alt="ทีมไทยถือธงที่งาน WICO" loading="lazy" class="w-full h-full object-cover" /></button>
+      <button data-f="assets/smartlung/wico5.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/smartlung/wico5.jpg" alt="บูธนำเสนอ SmartLung" loading="lazy" class="w-full h-full object-cover object-top" /></button>
+      <button data-f="assets/smartlung/wico4.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/smartlung/wico4.jpg" alt="รับรางวัลที่งาน WICO" loading="lazy" class="w-full h-full object-cover" /></button>
+      <button data-f="assets/smartlung/wico2.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/smartlung/wico2.jpg" alt="ทีมไทยหน้าสถานที่จัดงาน" loading="lazy" class="w-full h-full object-cover" /></button>
+      <button data-f="assets/smartlung/wico1.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/smartlung/wico1.jpg" alt="เซลฟี่กับเพื่อน ๆ ที่งาน" loading="lazy" class="w-full h-full object-cover" /></button>
+    </div>
+  </section>
+
+  <div id="lb" class="fixed inset-0 z-50 hidden bg-black/90 grid place-items-center p-4">
+    <button id="lb-close" class="absolute top-4 right-4 w-11 h-11 rounded-full bg-white/15 text-white text-2xl hover:bg-white/30" aria-label="ปิด">✕</button>
+    <div id="lb-body" class="max-w-5xl w-full max-h-[85vh] grid place-items-center"></div>
+  </div>
+
+  <footer class="py-10 text-center text-slate-400 text-sm"><span data-no-translate>Portfolio ภูมิ</span> · <span id="year"></span></footer>
+
+  <script type="module">
+    import { renderNav, escapeHtml } from "./js/app.js";
+    renderNav("smartlung");
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("show"); io.unobserve(e.target); } }), { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    const lb = document.getElementById("lb"), lbBody = document.getElementById("lb-body");
+    const openLb = (file) => {
+      lbBody.innerHTML = `<img src="${escapeHtml(file)}" alt="" class="max-h-[85vh] max-w-full rounded-3xl object-contain" />`;
+      lb.classList.remove("hidden");
+    };
+    const closeLb = () => { lb.classList.add("hidden"); lbBody.innerHTML = ""; };
+    document.querySelectorAll("button[data-f]").forEach((b) => b.addEventListener("click", () => openLb(b.dataset.f)));
+    document.getElementById("lb-close").addEventListener("click", closeLb);
+    lb.addEventListener("click", (e) => { if (e.target === lb) closeLb(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLb(); });
+  </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SolarAqua V.1 · Portfolio ภูมิ</title>
+  <meta name="description" content="SolarAqua V.1: โครงการแรกของ SolarAqua ที่ส่งเข้าแข่งขัน Junior Water Prize ผ่านเข้ารอบ 30 ทีมทั่วประเทศและได้นำเสนอผลงานหน้างาน" />
+  <meta name="theme-color" content="#0ea5e9" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SolarAqua V.1 · Portfolio ภูมิ" />
+  <meta property="og:description" content="ผลงานแรกของ SolarAqua — เข้ารอบ 30 ทีมทั่วประเทศ Junior Water Prize" />
+  <meta property="og:locale" content="th_TH" />
+  <link rel="icon" type="image/svg+xml" href="assets/icon.svg" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="stylesheet" href="css/tailwind.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- THEME:FONTS:START ocean -->
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <!-- THEME:FONTS:END -->
+  <script>try { if (localStorage.getItem("poom-portfolio-theme") === "dark") document.documentElement.classList.add("dark"); } catch (e) {}</script>
+  <style>
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s cubic-bezier(.16,1,.3,1); }
+    .reveal.show { opacity: 1; transform: none; }
+    .pop { transition: transform .3s cubic-bezier(.34,1.56,.64,1); }
+    .pop:hover { transform: translateY(-4px) rotate(-1deg) scale(1.03); }
+    .bob { animation: bob 3.2s ease-in-out infinite; }
+    @keyframes bob { 0%,100% { transform: translateY(0) rotate(-4deg); } 50% { transform: translateY(-10px) rotate(4deg); } }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } .pop:hover { transform: none; } .bob { animation: none; } }
+  </style>
+</head>
+<body class="bg-white text-slate-800">
+  <div id="nav-root"></div>
+
+  <header class="relative overflow-hidden">
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[640px] h-[640px] rounded-full bg-brand-100/60 blur-3xl" aria-hidden="true"></div>
+    <span class="bob absolute top-16 left-[8%] text-4xl select-none" aria-hidden="true">💧</span>
+    <span class="bob absolute top-8 right-[8%] sm:top-40 sm:right-[12%] text-4xl select-none" style="animation-delay:-1s" aria-hidden="true">🏆</span>
+    <div class="max-w-3xl mx-auto px-4 pt-20 pb-20 md:pt-28 md:pb-28 relative text-center animate-fadeUp">
+      <p class="inline-block px-3 py-1 rounded-full bg-brand-50 text-brand-700 text-sm font-medium" data-no-translate>SolarAqua V.1 · Junior Water Prize</p>
+      <h1 class="mt-6 text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">จุดเริ่มต้นของ<br /><span class="hero-grad">SolarAqua</span></h1>
+      <p class="mt-5 text-lg md:text-xl text-slate-600">ผลงานแรกที่ทำส่งแข่ง Junior Water Prize — ผ่านเข้ารอบ <b>30 ทีมทั่วประเทศ</b> และได้นำเสนอผลงานหน้างาน</p>
+      <div class="mt-9 flex flex-wrap gap-3 justify-center">
+        <a href="#build" class="pop px-7 py-3 rounded-full bg-brand-600 text-white font-semibold hover:bg-brand-700">ดูเรื่องราว</a>
+        <a href="index.html" class="pop px-7 py-3 rounded-full bg-slate-100 text-slate-700 font-semibold hover:bg-slate-200">ไปดู V.3 →</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="build" class="max-w-5xl mx-auto px-4 py-16 scroll-mt-16">
+    <p class="reveal text-sm font-semibold text-brand-600">1 · ลงมือสร้าง</p>
+    <h2 class="reveal mt-2 text-3xl font-extrabold">ประกอบตู้ควบคุมด้วยมือเอง</h2>
+    <p class="reveal mt-3 text-slate-600 max-w-2xl leading-relaxed">จัดวางอุปกรณ์ในตู้เอง ตั้งแต่ตัวควบคุมการชาร์จ อินเวอร์เตอร์ บอร์ดไมโครคอนโทรลเลอร์ ไปจนถึงรีเลย์ แล้วต่อสายและทดสอบทีละส่วน</p>
+    <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-3">
+      <button data-f="assets/v1/box.jpg" class="reveal pop aspect-[3/4] sm:col-span-1 rounded-3xl overflow-hidden bg-slate-100"><img src="assets/v1/box.jpg" alt="ตู้ควบคุมที่จัดวางอุปกรณ์แล้ว" loading="lazy" class="w-full h-full object-cover " /></button>
+      <button data-f="assets/v1/build1.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/v1/build1.jpg" alt="ประกอบและทดสอบตู้" loading="lazy" class="w-full h-full object-cover " /></button>
+      <button data-f="assets/v1/build2.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/v1/build2.jpg" alt="ต่อสายในตู้" loading="lazy" class="w-full h-full object-cover " /></button>
+      <button data-f="assets/v1/build3.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/v1/build3.jpg" alt="ตรวจการต่อสาย" loading="lazy" class="w-full h-full object-cover " /></button>
+    </div>
+  </section>
+
+  <section id="compete" class="max-w-5xl mx-auto px-4 py-16 scroll-mt-16">
+    <p class="reveal text-sm font-semibold text-brand-600">2 · วันแข่งขัน</p>
+    <h2 class="reveal mt-2 text-3xl font-extrabold">เข้ารอบ 30 ทีม นำเสนอหน้างาน</h2>
+    <p class="reveal mt-3 text-slate-600 max-w-2xl leading-relaxed">จาก Thailand Junior Water Prize 2026 ทีมผ่านเข้ารอบ 30 ทีมจากทั่วประเทศ ได้ตั้งบูธ นำตู้จริงมาอธิบายและตอบคำถามกรรมการ</p>
+    <div class="mt-8 grid sm:grid-cols-3 gap-3">
+      <button data-f="assets/v1/comp1.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/v1/comp1.jpg" alt="อธิบายผลงานหน้าบูธ" loading="lazy" class="w-full h-full object-cover " /></button>
+      <button data-f="assets/v1/comp2.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/v1/comp2.jpg" alt="กรรมการสอบถามที่บูธ" loading="lazy" class="w-full h-full object-cover " /></button>
+      <button data-f="assets/v1/comp3.jpg" class="reveal pop aspect-[4/3] rounded-3xl overflow-hidden bg-slate-100"><img src="assets/v1/comp3.jpg" alt="นำเสนอตู้จริง" loading="lazy" class="w-full h-full object-cover " /></button>
+    </div>
+    <div class="reveal mt-10 text-center"><a href="index.html#problem" class="pop inline-block px-7 py-3 rounded-full bg-brand-50 text-brand-700 font-semibold hover:bg-brand-100">หลังแข่ง เราติดตั้งใช้งานจริงที่สระบุรี → SolarAqua V.3</a></div>
+  </section>
+
+  <div id="lb" class="fixed inset-0 z-50 hidden bg-black/90 grid place-items-center p-4">
+    <button id="lb-close" class="absolute top-4 right-4 w-11 h-11 rounded-full bg-white/15 text-white text-2xl hover:bg-white/30" aria-label="ปิด">✕</button>
+    <div id="lb-body" class="max-w-5xl w-full max-h-[85vh] grid place-items-center"></div>
+  </div>
+
+  <footer class="py-10 text-center text-slate-400 text-sm"><span data-no-translate>Portfolio ภูมิ</span> · <span id="year"></span></footer>
+
+  <script type="module">
+    import { renderNav, escapeHtml } from "./js/app.js";
+    renderNav("v1");
+    document.getElementById("year").textContent = new Date().getFullYear();
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("show"); io.unobserve(e.target); } }), { threshold: 0.12 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+    const lb = document.getElementById("lb"), lbBody = document.getElementById("lb-body");
+    const openLb = (file) => {
+      lbBody.innerHTML = `<img src="${escapeHtml(file)}" alt="" class="max-h-[85vh] max-w-full rounded-3xl object-contain" />`;
+      lb.classList.remove("hidden");
+    };
+    const closeLb = () => { lb.classList.add("hidden"); lbBody.innerHTML = ""; };
+    document.querySelectorAll("button[data-f]").forEach((b) => b.addEventListener("click", () => openLb(b.dataset.f)));
+    document.getElementById("lb-close").addEventListener("click", closeLb);
+    lb.addEventListener("click", (e) => { if (e.target === lb) closeLb(); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeLb(); });
+  </script>
+</body>
+</html>

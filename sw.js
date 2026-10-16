@@ -1,7 +1,7 @@
 ﻿// Portfolio à¸ à¸¹à¸¡à¸´ service worker â€” minimal: makes the app installable and serves cached static
 // assets when offline. App data stays live (Firebase). Bump CACHE when PRECACHE changes.
-const CACHE = "poom-portfolio-v1";
-const PRECACHE = ["./", "./index.html", "./gallery.html", "./css/tailwind.css", "./js/app.js", "./js/firebase.js", "./assets/icon.svg", "./assets/icon-192.png", "./assets/icon-512.png"];
+const CACHE = "poom-portfolio-v2";
+const PRECACHE = ["./", "./index.html", "./gallery.html", "./smartlung.html", "./capstone.html", "./solaraqua-v1.html", "./css/tailwind.css", "./js/app.js", "./js/firebase.js", "./assets/icon.svg", "./assets/icon-192.png", "./assets/icon-512.png"];
 
 self.addEventListener("install", (e) => {
   e.waitUntil(caches.open(CACHE).then((c) => c.addAll(PRECACHE)).then(() => self.skipWaiting()));
